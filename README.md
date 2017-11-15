@@ -78,4 +78,3 @@ Virtlet is an open source project and any contributions are welcomed. Look into 
 ## Licensing
 
 Unless specifically noted, all parts of this project are licensed under the [Apache 2.0 license](LICENSE).
-
