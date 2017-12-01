@@ -198,7 +198,8 @@ func (d *defaultDownloader) DownloadFile(endpoint Endpoint) (string, error) {
 	}
 	defer resp.Body.Close()
 
-	_, err = io.Copy(tempFile, resp.Body)
+	buffer := make([]byte, 8 * 1024 * 1024)
+	_, err = io.CopyBuffer(tempFile, resp.Body, buffer)
 	if err != nil {
 		return "", err
 	}
